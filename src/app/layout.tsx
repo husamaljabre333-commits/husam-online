@@ -5,11 +5,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "حسام الجابري ‎﮼",
   description: "حسام الجابري — خبير بلوكشين وعملات رقمية ومطوّر ويب",
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
+icons: {
+  icon: "/icon.png",
+  shortcut: "/icon.png",
+  apple: "/apple-icon.png",
+},
+
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
