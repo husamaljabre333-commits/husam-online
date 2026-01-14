@@ -1,4 +1,8 @@
+"use client";
+
 import TechBackground from "@/components/ui/TechBackground";
+import Reveal from "@/components/ui/Reveal";
+
 import Header from "@/components/sections/Header";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -13,13 +17,34 @@ export default function Page() {
     <main className="min-h-screen">
       <TechBackground />
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Projects />
-      <Youtube />
-      <Contact />
-      <Footer />
+
+      <Reveal direction="up">
+        <Hero />
+      </Reveal>
+
+      <Reveal direction="right">
+        <About />
+      </Reveal>
+
+      <Reveal direction="left">
+        <Services />
+      </Reveal>
+
+      <Reveal direction="right">
+        <Projects />
+      </Reveal>
+
+      <Reveal direction="left">
+        <Youtube />
+      </Reveal>
+
+      <Reveal direction="right">
+        <Contact />
+      </Reveal>
+
+      <Reveal direction="up">
+        <Footer />
+      </Reveal>
     </main>
   );
 }

@@ -30,27 +30,6 @@ export default function TechBackground() {
       r: 1 + Math.random() * 2,
     }));
 
-    const drawGrid = () => {
-      const step = 42;
-      ctx.globalAlpha = 0.18;
-      ctx.strokeStyle = "#ffffff";
-      ctx.lineWidth = 1;
-
-      for (let x = 0; x < window.innerWidth; x += step) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, window.innerHeight);
-        ctx.stroke();
-      }
-      for (let y = 0; y < window.innerHeight; y += step) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(window.innerWidth, y);
-        ctx.stroke();
-      }
-      ctx.globalAlpha = 1;
-    };
-
     const tick = () => {
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
@@ -61,15 +40,12 @@ export default function TechBackground() {
         0,
         window.innerWidth * 0.25,
         window.innerHeight * 0.2,
-        Math.max(window.innerWidth, window.innerHeight)
+        Math.max(window.innerWidth, window.innerHeight) * 0.9
       );
-      g.addColorStop(0, "rgba(0, 255, 170, 0.10)");
-      g.addColorStop(0.5, "rgba(0, 150, 255, 0.10)");
+      g.addColorStop(0, "rgba(45, 150, 255, 0.10)");
       g.addColorStop(1, "rgba(10, 12, 20, 0)");
       ctx.fillStyle = g;
       ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
-
-      drawGrid();
 
       // move + draw particles
       for (const p of particles) {
@@ -79,28 +55,33 @@ export default function TechBackground() {
         if (p.y < 0 || p.y > window.innerHeight) p.vy *= -1;
 
         ctx.beginPath();
-        ctx.fillStyle = "rgba(255,255,255,0.65)";
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(255,255,255,0.65)";
         ctx.fill();
       }
 
-      // links
+      // connect close particles with subtle lines
+      ctx.globalAlpha = 0.25;
+      ctx.strokeStyle = "rgba(255,255,255,0.55)";
+      ctx.lineWidth = 1;
+
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
-          const a = particles[i], b = particles[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
+          const a = particles[i];
+          const b = particles[j];
+          const dx = a.x - b.x;
+          const dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 140) {
-            ctx.globalAlpha = (1 - dist / 140) * 0.22;
-            ctx.strokeStyle = "#ffffff";
+          if (dist < 110) {
+            ctx.globalAlpha = (1 - dist / 110) * 0.35;
             ctx.beginPath();
             ctx.moveTo(a.x, a.y);
             ctx.lineTo(b.x, b.y);
             ctx.stroke();
-            ctx.globalAlpha = 1;
           }
         }
       }
+      ctx.globalAlpha = 1;
 
       raf = requestAnimationFrame(tick);
     };
