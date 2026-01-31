@@ -11,6 +11,7 @@ import Projects from "@/components/sections/Projects";
 import Youtube from "@/components/sections/Youtube";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import Contracts from "@/components/sections/Contracts";
 
 export default function Page() {
   return (
@@ -29,6 +30,10 @@ export default function Page() {
       <Reveal direction="left">
         <Services />
       </Reveal>
+
+<Reveal direction="right">
+  <Contracts />
+</Reveal>
 
       <Reveal direction="right">
         <Projects />

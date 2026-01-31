@@ -10,7 +10,7 @@ export default function Contact() {
     telegram: "https://t.me/husamalj",
     youtube: "https://www.youtube.com/@Husam.aljabre",
     instagram: "https://www.instagram.com/husam_aljabre/",
-    facebook: "https://facebook.com/CHANGE_ME", // انت رح تغيّرها لاحقًا
+    facebook: "https://www.facebook.com/share/1DUPMsxMyE/?mibextid=wwXIfr", // انت رح تغيّرها لاحقًا
   };
 
   return (

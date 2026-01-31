@@ -7,7 +7,7 @@ export default function Youtube() {
   const t = content[lang];
 
   // ضع رابط قناتك هنا لاحقاً
-  const youtubeUrl = "https://www.youtube.com/";
+  const youtubeUrl = "https://www.youtube.com/@Husam.aljabre";
 
   return (
     <section id="youtube" className="mx-auto max-w-6xl px-4 py-10">

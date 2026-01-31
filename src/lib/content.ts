@@ -2,7 +2,7 @@ export type Lang = "ar" | "en";
 
 export const content = {
   ar: {
-    nav: { about: "من أنا", services: "الخدمات", projects: "المشاريع", youtube: "يوتيوب", contact: "تواصل" },
+nav: { about: "من أنا", services: "الخدمات", contracts: "العقود", projects: "المشاريع", youtube: "يوتيوب", contact: "تواصل" },
     hero: {
       badge: "Web3 • Blockchain • Web Development",
       title: "حسام الجابري",
@@ -20,8 +20,8 @@ export const content = {
     ],
     about: {
       title: "من أنا",
-      p1: "أنا حسام الجابري، أساعد المشاريع والأفراد ببناء حضور رقمي قوي، ومنصات ويب حديثة، وربط Web3 عند الحاجة.",
-      p2: "أركز على الجودة، السرعة، وتجربة المستخدم — مع تصميم أنيق وتنفيذ مضبوط.",
+      p1: "أنا حسام الجابري ، أساعد المشاريع والأفراد ببناء حضور رقمي قوي، ومنصات ويب حديثة، وربط Web3 عند الحاجة.",
+      p2: "أركز على الجودة، السرعة، وتجربة المستخدم - مع تصميم أنيق وتنفيذ مضبوط.",
     },
     services: {
       title: "الخدمات",
@@ -32,6 +32,32 @@ export const content = {
         { t: "استشارات Web3", d: "خارطة طريق، توكنوميكس، ونصائح للمنتج والنمو." },
       ],
     },
+        contracts: {
+      title: "العقود الذكية",
+      note: "مجموعة من العقود الذكية التي قمت بكتابتها ونشرها.",
+        items: [
+        {
+          t: "HeatRush Swap Router",
+          d: "راوتر سواپ مبني فوق Uniswap V2 مع فيس ثابتة ( Native + Token ) ودعم ETH → Tokens و Tokens → ETH و Tokens → Tokens.",
+          chain: "EVM ( Multi-chain )",
+          address: "0xF01841f58f6CE38196f5699426f79B55c9D29BAA",
+          href: "https://basescan.org/address/0xF01841f58f6CE38196f5699426f79B55c9D29BAA#code",
+          repo: "https://github.com/USERNAME/REPO",
+          tag: "Live",
+        },
+        {
+          t: "HeatRush HR Claim ",
+          d: "عقد Claim لتوكن HR مع نظام Merkle Proof ورسوم Claim بالـ native (wei) مع دعم استرجاع الفائض (Refund).",
+          chain: "EVM ( Multi-chain )",
+          address: "0x16705d8dA3E2A77563f1023893CCA244D1c140fb",
+          href: "https://basescan.org/address/0x16705d8dA3E2A77563f1023893CCA244D1c140fb#code",
+          repo: "https://github.com/USERNAME/REPO",
+          tag: "Live",
+        },
+      ],
+
+    },
+
     projects: {
       title: "مشاريع مختارة",
       note: "سيتم تحديث القائمة باستمرار.",
@@ -52,7 +78,7 @@ export const content = {
         },
         {
           t: "Clinic Demo",
-          d: "قالب عيادات: حجز عبر واتساب + موقع على الخريطة + واجهة زجاثثثجية.",
+          d: "قالب عيادات: حجز عبر واتساب + موقع على الخريطة + واجهة زجاجية.",
           tag: "Live",
           img: "/Clinic-Demo%20.png",
           href: "https://d1d1h.site/",
@@ -61,11 +87,11 @@ export const content = {
     },
     youtube: { title: "يوتيوب", desc: "محتوى مبسّط عن Web3 والبرمجة وبناء المشاريع التقنية.", cta: "زيارة القناة" },
     contact: { title: "تواصل معي", desc: "للتعاون، الاستشارات، أو بناء مشروعك.", cta: "إرسال رسالة" },
-    footer: "© " + new Date().getFullYear() + " Husam Aljabre — جميع الحقوق محفوظة",
+    footer: "© " + new Date().getFullYear() + " Husam Aljabre - جميع الحقوق محفوظة",
   },
 
   en: {
-    nav: { about: "About", services: "Services", projects: "Projects", youtube: "YouTube", contact: "Contact" },
+nav: { about: "About", services: "Services", contracts: "Contracts", projects: "Projects", youtube: "YouTube", contact: "Contact" },
     hero: {
       badge: "Web3 • Blockchain • Web Development",
       title: "Husam Aljabre",
@@ -95,6 +121,32 @@ export const content = {
         { t: "Web3 Consulting", d: "Roadmaps, tokenomics, and product growth advice." },
       ],
     },
+        contracts: {
+      title: "Smart Contracts",
+      note: "A set of smart contracts I wrote and deployed.",
+      items: [
+        {
+          t: "HeatRush Swap Router",
+          d: "A swap router on top of Uniswap V2 with fixed fees ( native + token ). Supports ETH → Tokens, Tokens → ETH, and Tokens → Tokens.",
+          chain: "EVM ( Multi-chain )",
+          address: "0xF01841f58f6CE38196f5699426f79B55c9D29BAA",
+          href: "https://blockscan.com/Address/0xF01841f58f6CE38196f5699426f79B55c9D29BAA",
+          repo: "https://github.com/USERNAME/REPO",
+          tag: "Live",
+        },
+        {
+          t: "HeatRush HR Claim",
+          d: "HR token claim contract with Merkle proof verification and a native claim fee ( wei ) with refund support.",
+          chain: "EVM ( Multi-chain )",
+          address: "0x16705d8dA3E2A77563f1023893CCA244D1c140fb",
+          href: "https://blockscan.com/Address/0x16705d8dA3E2A77563f1023893CCA244D1c140fb",
+          repo: "https://github.com/USERNAME/REPO",
+          tag: "Live",
+        },
+      ],
+
+    },
+
     projects: {
       title: "Featured Work",
       note: "This list will be updated continuously.",
@@ -124,6 +176,6 @@ export const content = {
     },
     youtube: { title: "YouTube", desc: "Clear content on Web3, programming, and building tech projects.", cta: "Visit Channel" },
     contact: { title: "Contact", desc: "For collaboration, consulting, or building your product.", cta: "Send Message" },
-    footer: "© " + new Date().getFullYear() + " Husam Aljabre — All rights reserved",
+    footer: "© " + new Date().getFullYear() + " Husam Aljabre - All rights reserved",
   },
 } as const;

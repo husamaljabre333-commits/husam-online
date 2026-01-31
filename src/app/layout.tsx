@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "حسام الجابري ‎﮼",
-  description: "حسام الجابري — خبير بلوكشين وعملات رقمية ومطوّر ويب",
+  description: "حسام الجابري - خبير بلوكشين وعملات رقمية ومطوّر ويب",
 icons: {
   icon: "/icon.png",
   shortcut: "/icon.png",

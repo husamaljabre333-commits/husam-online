@@ -23,6 +23,7 @@ export default function Header() {
         <nav className="hidden md:flex items-center gap-6 text-sm text-white/75">
           <a className="hover:text-white" href="#about">{t.nav.about}</a>
           <a className="hover:text-white" href="#services">{t.nav.services}</a>
+         <a className="hover:text-white" href="#contracts">{t.nav.contracts}</a>
           <a className="hover:text-white" href="#projects">{t.nav.projects}</a>
           <a className="hover:text-white" href="#youtube">{t.nav.youtube}</a>
           <a className="hover:text-white" href="#contact">{t.nav.contact}</a>
